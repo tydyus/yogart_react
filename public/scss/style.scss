@@ -1,0 +1,51 @@
+@import "abstract/color";   
+@import "page/index";                 
+@import "art/index";                            
+@import "art/page";           
+@import "art/gallery";          
+@import "yoga/index";      
+//text         
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap');@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+*{    
+    color: #313640;         
+}      
+h1{   
+    font-family: 'Crimson Text', serif;        
+    color:rgb(22, 22, 22);              
+    text-transform: uppercase;        
+    text-align: center;     
+} 
+    
+html{           
+    scroll-behavior: smooth;            
+}      
+body{         
+    margin:0;        
+    width: 100vw;    
+    overflow: hidden; 
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    &::-webkit-scrollbar {   
+        display: none;       
+      }         
+}       
+#root{  
+    overflow-x: hidden;   
+    overflow-y: hidden; 
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    &::-webkit-scrollbar {
+        display: none;
+      }
+}
+section{    
+    height: 100vh;  
+    width: 100vw; 
+    overflow: hidden;
+    position: relative;
+}  
+ 
+.hide{ 
+    display:none;   
+}  

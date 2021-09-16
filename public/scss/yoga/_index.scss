@@ -1,0 +1,31 @@
+.indexYoga{
+    display: grid;
+    grid-template-columns: 14.28% 14.28% 14.28% 14.28% 14.28% 14.28% 14.28%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-areas:
+    "tt tt tt 44 44 44 44"
+    "33 33 33 33 33 55 55"
+    "11 cc cc cc cc 55 55"
+    "11 cc cc cc cc 55 55"
+    "ll ll ll ll 66 66 66"
+    ;
+    > .yogaTitle{grid-area: tt;}
+    > .yogaContent{grid-area: cc;}
+    > .yogaLinks{grid-area: ll;}
+    .card{
+        border-radius: 1vh;
+        background: #ffffff;
+        box-shadow:  5px 5px 15px #0000000a,
+                    -5px -5px 15px #ffffff86;
+    }
+    .yogaTitle, .yogaContent, .yogaLinks{
+        //width: fit-content;
+        margin:5vh;
+        padding:1vh;
+    }
+    .yogaTitle{
+        text-transform: uppercase;
+        text-align: center;
+        vertical-align: middle;
+    }
+}

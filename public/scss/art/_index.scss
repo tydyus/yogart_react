@@ -1,0 +1,97 @@
+.indexArt{
+    position: relative;
+    @media screen and (max-width:600px) {
+        
+    }
+
+    
+    .artIndexInfo{
+        right: 0;
+        top:0;
+        height: 100vh;
+        position: absolute;
+        width: calc(400px - 10vh - 3vw);
+        max-width: calc(80vw - 10vh - 3vw);
+        background: rgba(255, 255, 255, 0.377);
+        z-index: 1;
+        animation: liveFromRight 1s linear 1; 
+        animation-fill-mode: forwards;
+        padding: 3% 10vh 3% 3vw;
+        overflow-y: auto;
+        
+    }
+    .artContent{
+        @media screen and (max-width:600px){
+            p{font-size: 0.8em;}
+            padding: 3% 7vh 3% 3%;
+        }
+    }
+    .artTitle{
+        width: fit-content;
+        background: 
+        linear-gradient(90deg, 
+        transparent 20%,
+         rgb(236, 79, 16) 20%,
+         rgb(236, 79, 16) 80%,
+         transparent 80%); 
+        z-index: 2;
+        animation: liveFromRight 1s linear 1;
+        animation-fill-mode: forwards;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        *{
+            text-align: center; 
+            color:white;
+            text-transform: uppercase;
+        }
+    }
+    .artLinks{
+        position: absolute;
+        top:0;
+        display: flex;
+        flex-direction: column;
+        
+        > a{
+            border: 4px rgb(64, 180, 216) solid;
+            z-index: 20;
+            &:hover{border: 4px rgba(255, 255, 255, 0.377) solid;z-index: 24;}
+            animation: liveFromRight 1s linear 1; 
+            animation-fill-mode: forwards;
+            padding:16px 20px 16px 4px;
+            margin:4px 0 4px 0;
+            height: fit-content;
+            background-color: rgb(64, 180, 216);
+            text-align: left;
+            vertical-align: middle;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: white;
+            position: relative;
+        }
+        z-index: 20;
+        @media screen and (min-width:calc(601px)){
+            right: 400px;
+            height: auto;
+            justify-content:start;
+            > a{
+                width: 15vh;
+                font-size: 1em;
+            }
+        }
+        @media screen and (max-width:calc(600px)){
+            left:auto;
+            right: 0;
+            height: 100vh;
+            justify-content: center;
+            > a{
+                width: 10vh;
+                font-size: 0.8em;
+            }
+        }
+    }
+}
+@keyframes liveFromRight{
+    to{transform: translateX(0vw);}
+    from{transform: translateX(100vw);}
+}

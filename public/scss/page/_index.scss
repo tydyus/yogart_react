@@ -1,0 +1,218 @@
+.indexPage{
+    position: relative;
+    height: 100vh;
+    width: 220vw;
+    background: 
+        url("../images/cover.png"),
+        radial-gradient(rgb(219, 223, 224),white);
+    background-size: cover;
+    background-position: center;
+    transform: translateX(-60vw);
+    transition-duration: 1s;
+    transition-property: transform;
+    &.left{transform: translateX(0vw);}
+    &.right{transform: translateX(-120vw);}
+    .indexYoga{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100vw;
+        background-size: cover;
+    }
+    .indexArt{
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100vw;
+    }
+}
+.cardId{
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(calc(50vw - 50%), calc(50vh - 50%));
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    padding:5px;
+    opacity: 1;
+    transition-duration: 1s, 3s, 1s, 1s;
+    transition-property: opacity, transform, height, width;
+    @media screen and (min-width:600px){
+        max-width: 50vw;
+    }
+    @media screen and (max-width:600px){
+        max-width: 95vw;
+    }
+    h1{ 
+        
+        margin:0;
+        padding:15px;
+        background: rgba(255, 255, 255, 0.384);
+        box-shadow: 0 8px 32px rgba( 31, 38, 135, 0.37 );
+        backdrop-filter: blur( 4px );
+        border-radius: 10px;
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+    i{
+        opacity: 1;
+        transition-duration: 1s;
+        padding: 50vh 4px 50vh 4px;
+        border-radius: 4px;
+        color: white;
+    }
+    &.done{
+        //animation: 1 cardtoTo 1s linear;
+        opacity: 0;
+        //animation-fill-mode: forwards;
+        i{opacity: 0;}
+    }
+    .cardIdInfo:not(.activ){
+        display: none;
+    }
+    .cardIdInfo{
+        background: rgba(255, 255, 255, 0.384);
+        padding:5px;
+    }
+} 
+.indexMovLeft.done.hide ~ .cardId{
+    transform:translate(calc(0% - 100vw), calc(50vh - 50%));
+}
+.indexMovRight.hide ~ .cardId{
+    transform:translate(calc(100vw - 0%), calc(50vh - 50%));
+}
+@keyframes cardtoTo{
+    from{
+        transform: translate(calc(50vw - 50%), calc(50vh - 50%));
+    }
+    to{
+        transform: translate(calc(50vw - 50%), 2px);
+    }
+}
+.indexMovLeft, .indexMovRight{
+    z-index: 11;
+    position: absolute;
+    height: 100vh;
+    width: 30vw; 
+    top:0;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
+    transition-duration: 1s;
+    &:hover{background-color: rgba(0, 0, 0, 0.158);}
+}
+.indexMovRight:not(.done){
+    right: 0;
+    &:hover ~ .snapWrapper .indexPage{
+        transform: translateX(-70vw);
+    }
+    &:hover ~ .cardId{
+        .fa-chevron-right{
+            animation: chevronActifR 500ms infinite alternate;
+        }
+    } 
+}
+.indexMovRight.done{right:  0;}
+.indexMovLeft:not(.done){
+    left: 0;
+    &:hover ~ .snapWrapper .indexPage{
+        transform: translateX(-50vw);    
+    }
+    &:hover ~ .cardId{
+        .fa-chevron-left{
+            animation: chevronActifL 500ms infinite alternate;
+        }
+    }
+} 
+@keyframes chevronActifR{
+    to{
+        transform: translateX(4px);
+    }
+    from{
+        transform: translateX(0);
+    }
+}
+@keyframes chevronActifL{
+    to{
+        transform: translateX(-4px);
+    }
+    from{
+        transform: translateX(0);
+    }
+}
+
+.BtnNext, .BtnPrev{
+    z-index: 20;
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    i{
+        font-size: 3em;
+        transform: scale(1);
+        transition-duration: 1s;
+        color:white;
+        border-radius: 100%;
+        background-color: rgb(34, 38, 48);
+        border: 3px transparent solid;
+        width: 1em;
+        text-align: center;
+    }
+    &:hover i{
+        background-color: rgba(34, 38, 48, 0.486);
+    }
+
+}
+.indexYoga::after, .indexArt::after{
+    position: absolute;
+    font-size: 15vw;
+    transition-duration: 1s;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.indexYoga::after{
+    content: "YOGA";
+    top:5px;
+    right: calc(40vw - 5px);
+    transform: translateX(100%);
+    color: rgba(0, 0, 0, 0.288);
+}
+.indexArt::after{
+    content: "ART";
+    bottom: 5px;
+    left: calc(40vw - 5px);
+    transform: translateX(-100%);
+    color: rgba(255, 255, 255, 0.288);
+}
+.indexPage.right .indexArt::after{
+    left: calc(0vw + 5px);
+    transform: translateX(0%);
+}
+.indexPage.left .indexYoga::after{
+    right: calc(0vw + 5px);
+    transform: translateX(0%);
+}
+.BtnNext{bottom: calc(10px + 20vh);}
+.BtnPrev{top: 10px;}
+.indexArt{
+    .BtnNext, .BtnPrev{
+        display: none;
+    }
+}
+@media screen and (max-width:600px){
+    
+    .BtnNext{
+        bottom: calc(3em + 20px + 10px + 20vh);
+        left:auto;
+        right: 10px;
+        transform: translateX(0); 
+    }
+    .BtnPrev{
+        top: auto;
+        bottom: calc(3em + 20px + 10px + 20vh);
+        left:auto;
+        right: 10px;
+        transform: translateX(0%) translateY(-110%);
+    }
+}

@@ -1,0 +1,35 @@
+[
+    {
+        "name":"fleural",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus sapien id velit luctus molestie. Nullam sed nisl eget magna dapibus fringilla. Nulla ut urna faucibus, lobortis nibh at, placerat dolor. Vivamus in felis ac metus vehicula malesuada eget vel est. Nam tincidunt eros et neque commodo, in gravida neque consequat. Vestibulum vitae rutrum ipsum, quis dignissim enim. Quisque sed urna arcu. Vestibulum non nisi ante. Duis in odio ut dui lacinia dignissim. ",
+        "image":"images/paintclefPH1.jpg",
+        "paints":[
+            {"image":"https://www.llecointe.com/clef-110-ms.jpg"},
+            {"image":"https://www.llecointe.com/clef-40-ms.jpg"},
+            {"image":"https://cdn.pixabay.com/photo/2018/02/06/22/43/painting-3135875_960_720.jpg"}
+            
+        ]
+    },
+    {
+        "name":"abstrait",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus sapien id velit luctus molestie. Nullam sed nisl eget magna dapibus fringilla. Nulla ut urna faucibus, lobortis nibh at, placerat dolor. Vivamus in felis ac metus vehicula malesuada eget vel est. Nam tincidunt eros et neque commodo, in gravida neque consequat. Vestibulum vitae rutrum ipsum, quis dignissim enim. Quisque sed urna arcu. Vestibulum non nisi ante. Duis in odio ut dui lacinia dignissim. ",
+        "image":"https://cdn.pixabay.com/photo/2016/06/25/12/55/art-1478831_960_720.jpg",
+        "paints":[
+            {"image":"https://cdn.pixabay.com/photo/2018/02/06/22/43/painting-3135875_960_720.jpg"},
+            {"image":"https://cdn.pixabay.com/photo/2018/02/06/22/43/painting-3135875_960_720.jpg"},
+            {"image":"https://cdn.pixabay.com/photo/2018/02/06/22/43/painting-3135875_960_720.jpg"}
+            
+        ]
+    },
+    {
+        "name":"super longue description",
+        "content":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras faucibus sapien id velit luctus molestie. Nullam sed nisl eget magna dapibus fringilla. Nulla ut urna faucibus, lobortis nibh at, placerat dolor. Vivamus in felis ac metus vehicula malesuada eget vel est. Nam tincidunt eros et neque commodo, in gravida neque consequat. Vestibulum vitae rutrum ipsum, quis dignissim enim. Quisque sed urna arcu. Vestibulum non nisi ante. Duis in odio ut dui lacinia dignissim. ",
+        "image":"https://cdn.pixabay.com/photo/2016/06/25/12/55/art-1478831_960_720.jpg",
+        "paints":[
+            {"image":"https://cdn.pixabay.com/photo/2018/02/06/22/43/painting-3135875_960_720.jpg"},
+            {"image":"https://cdn.pixabay.com/photo/2018/02/06/22/43/painting-3135875_960_720.jpg"},
+            {"image":"https://cdn.pixabay.com/photo/2018/02/06/22/43/painting-3135875_960_720.jpg"}
+            
+        ]
+    }
+]
