@@ -11,10 +11,15 @@
 # production
 /build
 
+#dataLocal
+/dataExterne
+
 # art
+.psd
+.kra
 .kra~
 .png~
-
+                                   
 # misc
 .DS_Store
 .env.local
